@@ -1,0 +1,43 @@
+.wrapper {
+    display: flex;
+}
+.statisticBtn__good {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: green;
+    text-transform: uppercase;
+    color: white;
+}
+.statisticBtn__good:hover {
+    cursor: pointer;
+}
+.statisticBtn__neutral {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: yellow;
+    text-transform: uppercase;
+    color: black;
+}
+.statisticBtn__neutral:hover {
+    cursor: pointer;
+}
+.statisticBtn__bad {
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: red;
+    text-transform: uppercase;
+    color: white;
+}
+.statisticBtn__bad:hover {
+    cursor: pointer;
+}
+
+.statisticTitle {
+    color: black;
+}
