@@ -7,16 +7,28 @@ export const Feedback = () => {
   const [badCount, setBadCount] = useState(0);
 
   const handleGood = () => {
-    setGoodCount(goodCount + 1);
+    setGoodCount((prevGoodCount) => prevGoodCount + 1);
   };
 
   const handleNeutral = () => {
-    setNeutralCount(neutralCount + 1);
+    setNeutralCount((prevNeutralCount) => prevNeutralCount + 1);
   };
 
   const handleBad = () => {
-    setBadCount(badCount + 1);
+    setBadCount((prevBadCount) => prevBadCount + 1);
   };
+
+  const countTotalFeedback = () => {
+    return goodCount + neutralCount + badCount;
+  };
+
+  const countPositiveFeedbackPercentage = () => {
+    if (countTotalFeedback() === 0) {
+      return 0;
+    }
+    return (goodCount / countTotalFeedback()) * 100;
+  };
+  const PositiveFeedbackPercentage = Math.ceil(countPositiveFeedbackPercentage());
 
   return (
     <div>
@@ -36,7 +48,8 @@ export const Feedback = () => {
       <p>Good: {goodCount}</p>
       <p>Neutral: {neutralCount}</p>
       <p>Bad: {badCount}</p>
+      <p>Total: {countTotalFeedback()}</p>
+      <p>Positive feedback: {PositiveFeedbackPercentage}%</p>
     </div>
   );
 };
-
