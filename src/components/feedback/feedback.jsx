@@ -28,7 +28,7 @@ export const Feedback = () => {
     }
     return (goodCount / countTotalFeedback()) * 100;
   };
-  const PositiveFeedbackPercentage = Math.ceil(countPositiveFeedbackPercentage());
+  const PositiveFeedbackPercentage = Math.floor(countPositiveFeedbackPercentage());
 
   return (
     <div>
