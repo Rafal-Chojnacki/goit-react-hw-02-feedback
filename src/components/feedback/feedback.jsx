@@ -45,11 +45,17 @@ export const Feedback = () => {
         </button>
       </div>
       <h2>Statistics</h2>
-      <p>Good: {goodCount}</p>
-      <p>Neutral: {neutralCount}</p>
-      <p>Bad: {badCount}</p>
-      <p>Total: {countTotalFeedback()}</p>
-      <p>Positive feedback: {PositiveFeedbackPercentage}%</p>
+      {countTotalFeedback() === 0 ? (
+        <p>There is no feedback</p>
+      ) : (
+        <div>
+          <p>Good: {goodCount}</p>
+          <p>Neutral: {neutralCount}</p>
+          <p>Bad: {badCount}</p>
+          <p>Total: {countTotalFeedback()}</p>
+          <p>Positive feedback: {PositiveFeedbackPercentage}%</p>
+        </div>
+      )}
     </div>
   );
 };
