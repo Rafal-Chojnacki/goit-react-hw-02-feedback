@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
 }
-.statisticBtn__good {
+.goodBtn {
     height: 30px;
     width: 90px;
     border-radius: 10px;
@@ -10,10 +10,10 @@
     text-transform: uppercase;
     color: white;
 }
-.statisticBtn__good:hover {
+.goodBtn:hover {
     cursor: pointer;
 }
-.statisticBtn__neutral {
+.neutralBtn {
     height: 30px;
     width: 90px;
     border-radius: 10px;
@@ -22,10 +22,10 @@
     text-transform: uppercase;
     color: black;
 }
-.statisticBtn__neutral:hover {
+.neutralBtn:hover {
     cursor: pointer;
 }
-.statisticBtn__bad {
+.badBtn {
     height: 30px;
     width: 90px;
     border-radius: 10px;
@@ -34,7 +34,7 @@
     text-transform: uppercase;
     color: white;
 }
-.statisticBtn__bad:hover {
+.badBtn:hover {
     cursor: pointer;
 }
 

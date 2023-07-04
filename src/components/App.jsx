@@ -1,4 +1,6 @@
-import React, { Feedback } from "./feedback/feedback";
+import { SectionTitle } from "./sectionTitle";
+
+
 export const App = () => {
   return (
     <div
@@ -11,7 +13,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <Feedback/>
+      <SectionTitle/>
     </div>
   );
 };
