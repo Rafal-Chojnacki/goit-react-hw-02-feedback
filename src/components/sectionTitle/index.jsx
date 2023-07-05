@@ -1,12 +1,12 @@
-import Counter from "components/Counter";
-import Statistic from "components/statistics";
+import FeedbackOptions from "components/FeedbackOptions";
+import Statistic from "components/Statistics";
 
 
-export const SectionTitle = () => {
+export const SectionTitle = (good, neutral, bad) => {
   return (
     <div>
     <h1>Please leave feedback</h1>
-    <Counter/>
+    <FeedbackOptions/>
     <h2>Statistics</h2>
     <Statistic/>
     </div>

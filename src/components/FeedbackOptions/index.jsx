@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import css from "./counter.module.css";
+import css from "./feedbackOptions.module.css";
 
-class Counter extends Component {
-
+class FeedbackOptions extends Component {
+  
   static defaultProps = {
     step: 1,
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       good: 0,
       neutral: 0,
@@ -49,8 +49,9 @@ class Counter extends Component {
           Bad {bad}
         </button>
       </div>
+      
     );
   }
 }
 
-export default Counter;
+export default FeedbackOptions;

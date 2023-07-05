@@ -4,6 +4,7 @@ const Statistic = ({ good, neutral, bad }) => {
   const total = good + neutral + bad;
   const average = total !== 0 ? (good - bad) / total : 0;
   const positivePercentage = total !== 0 ? (good / total) * 100 : 0;
+  console.log(good)
 
   return (
     <div>
