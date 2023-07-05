@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import css from "./counter.module.css";
 
 class Counter extends Component {
+
   static defaultProps = {
     step: 1,
   };
