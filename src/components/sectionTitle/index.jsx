@@ -1,10 +1,11 @@
+import { Component } from 'react';
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/statistics';
 import css from '../FeedbackOptions/feedbackOptions.module.css';
 import React from 'react';
 
 
-class SectionTitle extends React.Component {
+class SectionTitle extends Component {
 
   static defaultProps = {
     step: 1,
