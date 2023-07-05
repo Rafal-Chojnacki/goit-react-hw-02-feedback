@@ -1,6 +1,7 @@
 import React from 'react';
 
-const Statistic = ({ good, neutral, bad }) => {
+
+const Statistics = ({ good, neutral, bad }) => {
   const total = good + neutral + bad;
   const average = total !== 0 ? (good - bad) / total : 0;
   const positivePercentage = total !== 0 ? (good / total) * 100 : 0;
@@ -18,4 +19,4 @@ const Statistic = ({ good, neutral, bad }) => {
   );
 };
 
-export default Statistic;
+export default Statistics;

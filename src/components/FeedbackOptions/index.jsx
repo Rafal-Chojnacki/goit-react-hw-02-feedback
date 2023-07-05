@@ -7,49 +7,31 @@ class FeedbackOptions extends Component {
     step: 1,
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    };
-  }
-
-  handleGood = (evt) => {
-    this.setState((prevState) => ({
-      good: prevState.good + this.props.step,
-    }));
+  handleGood = () => {
+    this.props.onFeedbackChange("good");
   };
 
-  handleNeutral = (evt) => {
-    this.setState((prevState) => ({
-      neutral: prevState.neutral + this.props.step,
-    }));
+  handleNeutral = () => {
+    this.props.onFeedbackChange("neutral");
   };
 
-  handleBad = (evt) => {
-    this.setState((prevState) => ({
-      bad: prevState.bad + this.props.step,
-    }));
+  handleBad = () => {
+    this.props.onFeedbackChange("bad");
   };
 
   render() {
-    const { good, neutral, bad } = this.state;
-
     return (
       <div>
         <button className={css.goodBtn} type="button" onClick={this.handleGood}>
-          Good {good}
+          Good
         </button>
         <button className={css.neutralBtn} type="button" onClick={this.handleNeutral}>
-          Neutral {neutral}
+          Neutral
         </button>
         <button className={css.badBtn} type="button" onClick={this.handleBad}>
-          Bad {bad}
+          Bad
         </button>
       </div>
-      
     );
   }
 }
