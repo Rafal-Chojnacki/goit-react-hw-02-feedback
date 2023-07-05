@@ -1,4 +1,5 @@
-import SectionTitle from './SectionTitle';
+import SectionTitle from "./sectionTitle";
+
 
 export const App = () => {
   return (

@@ -1,10 +1,14 @@
 import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/statistics';
+import css from '../FeedbackOptions/feedbackOptions.module.css';
 import React from 'react';
 
 
 class SectionTitle extends React.Component {
-  
+
+  static defaultProps = {
+    step: 1,
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +28,7 @@ class SectionTitle extends React.Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <div>
+      <div className={css.wrapper}>
         <h1>Please leave feedback</h1>
         <FeedbackOptions
           good={good}
